@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\paras\PycharmProjects\DL_regression\main\main_cnn.py", line 45, in <module>
+    trainer.train_and_evaluate(fold, config)
+  File "C:\Users\paras\PycharmProjects\DL_regression\trainers\trainer.py", line 44, in train_and_evaluate
+    c = self.model(images)
+           ^^^^
+KeyboardInterrupt

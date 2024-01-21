@@ -1,0 +1,725 @@
+2024-01-18 17:16:23,258 INFO    StreamThr :35788 [internal.py:wandb_internal():86] W&B internal server running at pid: 35788, started at: 2024-01-18 17:16:23.257959
+2024-01-18 17:16:23,261 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status
+2024-01-18 17:16:23,288 INFO    WriterThread:35788 [datastore.py:open_for_write():85] open: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\run-cqbrb037.wandb
+2024-01-18 17:16:23,289 DEBUG   SenderThread:35788 [sender.py:send():380] send: header
+2024-01-18 17:16:23,290 DEBUG   SenderThread:35788 [sender.py:send():380] send: run
+2024-01-18 17:16:23,777 INFO    SenderThread:35788 [dir_watcher.py:__init__():211] watching files in: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files
+2024-01-18 17:16:23,777 INFO    SenderThread:35788 [sender.py:_start_run_threads():1122] run started: cqbrb037 with start time 1705612583.262972
+2024-01-18 17:16:23,800 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: check_version
+2024-01-18 17:16:23,800 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: check_version
+2024-01-18 17:16:24,151 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: run_start
+2024-01-18 17:16:24,186 DEBUG   HandlerThread:35788 [system_info.py:__init__():32] System info init
+2024-01-18 17:16:24,186 DEBUG   HandlerThread:35788 [system_info.py:__init__():47] System info init done
+2024-01-18 17:16:24,186 INFO    HandlerThread:35788 [system_monitor.py:start():181] Starting system monitor
+2024-01-18 17:16:24,187 INFO    SystemMonitor:35788 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2024-01-18 17:16:24,187 INFO    HandlerThread:35788 [system_monitor.py:probe():201] Collecting system info
+2024-01-18 17:16:24,209 INFO    SystemMonitor:35788 [interfaces.py:start():190] Started cpu monitoring
+2024-01-18 17:16:24,217 INFO    SystemMonitor:35788 [interfaces.py:start():190] Started disk monitoring
+2024-01-18 17:16:24,218 INFO    SystemMonitor:35788 [interfaces.py:start():190] Started gpu monitoring
+2024-01-18 17:16:24,219 INFO    SystemMonitor:35788 [interfaces.py:start():190] Started memory monitoring
+2024-01-18 17:16:24,233 INFO    SystemMonitor:35788 [interfaces.py:start():190] Started network monitoring
+2024-01-18 17:16:24,234 DEBUG   HandlerThread:35788 [system_info.py:probe():196] Probing system
+2024-01-18 17:16:24,235 DEBUG   HandlerThread:35788 [gitlib.py:_init_repo():53] git repository is invalid
+2024-01-18 17:16:24,235 DEBUG   HandlerThread:35788 [system_info.py:probe():244] Probing system done
+2024-01-18 17:16:24,235 DEBUG   HandlerThread:35788 [system_monitor.py:probe():210] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.11.5', 'heartbeatAt': '2024-01-18T21:16:24.234247', 'startedAt': '2024-01-18T21:16:23.240959', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'C:\\Users\\paras\\PycharmProjects\\DL_regression\\main\\main_cnn.py', 'codePathLocal': 'main_cnn.py', 'codePath': 'main_cnn.py', 'host': 'Shiv', 'username': 'paras', 'executable': 'C:\\Users\\paras\\anaconda3\\envs\\venv\\python.exe', 'cpu_count': 14, 'cpu_count_logical': 20, 'cpu_freq': {'current': 1506.0, 'min': 0.0, 'max': 2300.0}, 'cpu_freq_per_core': [{'current': 1506.0, 'min': 0.0, 'max': 2300.0}], 'disk': {'/': {'total': 930.3886680603027, 'used': 710.9855728149414}}, 'gpu': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'memory_total': 6442450944}], 'memory': {'total': 15.692127227783203}}
+2024-01-18 17:16:24,235 INFO    HandlerThread:35788 [system_monitor.py:probe():211] Finished collecting system info
+2024-01-18 17:16:24,235 INFO    HandlerThread:35788 [system_monitor.py:probe():214] Publishing system info
+2024-01-18 17:16:24,236 DEBUG   HandlerThread:35788 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-01-18 17:16:24,254 DEBUG   HandlerThread:35788 [system_info.py:_save_pip():68] Saving pip packages done
+2024-01-18 17:16:24,255 DEBUG   HandlerThread:35788 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2024-01-18 17:16:24,263 ERROR   HandlerThread:35788 [system_info.py:_save_conda():86] Error saving conda packages: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\internal\system\system_info.py", line 82, in _save_conda
+    subprocess.call(
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\subprocess.py", line 389, in call
+    with Popen(*popenargs, **kwargs) as p:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\JetBrains\PyCharm 2023.2\plugins\python\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 585, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2024-01-18 17:16:24,268 DEBUG   HandlerThread:35788 [system_info.py:_save_conda():87] Saving conda packages done
+2024-01-18 17:16:24,272 INFO    HandlerThread:35788 [system_monitor.py:probe():216] Finished publishing system info
+2024-01-18 17:16:24,287 DEBUG   SenderThread:35788 [sender.py:send():380] send: files
+2024-01-18 17:16:24,288 INFO    SenderThread:35788 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2024-01-18 17:16:24,300 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:16:24,301 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:16:24,305 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:16:24,763 DEBUG   SenderThread:35788 [sender.py:send():380] send: telemetry
+2024-01-18 17:16:24,781 INFO    Thread-20 :35788 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\conda-environment.yaml
+2024-01-18 17:16:24,781 INFO    Thread-20 :35788 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\wandb-metadata.json
+2024-01-18 17:16:24,782 INFO    Thread-20 :35788 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\requirements.txt
+2024-01-18 17:16:24,816 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: log_artifact
+2024-01-18 17:16:24,817 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: log_artifact
+2024-01-18 17:16:25,021 INFO    wandb-upload_0:35788 [upload_job.py:push():131] Uploaded file C:\Users\paras\AppData\Local\Temp\tmp3rzz1m_wwandb\9pjz4trl-wandb-metadata.json
+2024-01-18 17:16:25,254 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: partial_history
+2024-01-18 17:16:25,779 INFO    Thread-20 :35788 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\media\table\Configs_0_73c2fdae2a4fdcd49dd6.table.json
+2024-01-18 17:16:25,780 INFO    Thread-20 :35788 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\media
+2024-01-18 17:16:25,780 INFO    Thread-20 :35788 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\media\table
+2024-01-18 17:16:25,804 INFO    wandb-upload_0:35788 [upload_job.py:push():89] Uploaded file C:\Users\paras\AppData\Local\wandb\wandb\artifacts\staging\tmpsgdsrztz
+2024-01-18 17:16:26,042 INFO    wandb-upload_1:35788 [upload_job.py:push():131] Uploaded file C:\Users\paras\AppData\Local\Temp\tmp3rzz1m_wwandb\d1yolxpb-media/table/Configs_0_73c2fdae2a4fdcd49dd6.table.json
+2024-01-18 17:16:26,621 INFO    SenderThread:35788 [sender.py:send_request_log_artifact():1444] logged artifact run-cqbrb037-Configs - {'id': 'QXJ0aWZhY3Q6Njk1NjMzNzcx', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEzMTY0MjM1Nw==', 'latestArtifact': None}}
+2024-01-18 17:16:26,621 DEBUG   SenderThread:35788 [sender.py:send():380] send: files
+2024-01-18 17:16:26,621 INFO    SenderThread:35788 [sender.py:_save_file():1378] saving file media\table\Configs_0_73c2fdae2a4fdcd49dd6.table.json with policy now
+2024-01-18 17:16:26,622 DEBUG   SenderThread:35788 [sender.py:send():380] send: history
+2024-01-18 17:16:26,623 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: summary_record
+2024-01-18 17:16:26,627 INFO    SenderThread:35788 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-01-18 17:16:26,781 INFO    Thread-20 :35788 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\wandb-summary.json
+2024-01-18 17:16:26,954 INFO    wandb-upload_0:35788 [upload_job.py:push():131] Uploaded file C:\Users\paras\AppData\Local\Temp\tmp3rzz1m_wwandb\f14l8vii-media/table/Configs_0_73c2fdae2a4fdcd49dd6.table.json
+2024-01-18 17:16:28,651 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:16:33,698 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:16:38,749 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:16:39,300 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:16:39,300 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:16:39,301 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:16:44,446 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:16:49,487 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:16:54,318 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:16:54,320 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:16:54,322 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:16:54,510 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:16:55,069 INFO    Thread-20 :35788 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\config.yaml
+2024-01-18 17:16:59,665 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:17:04,705 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:17:09,327 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:17:09,327 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:17:09,328 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:17:10,412 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:17:15,449 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:17:20,503 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:17:24,247 DEBUG   SystemMonitor:35788 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2024-01-18 17:17:24,250 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:17:24,342 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:17:24,343 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:17:24,344 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:17:25,511 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:17:30,569 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:17:35,640 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:17:39,344 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:17:39,345 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:17:39,359 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:17:41,479 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:17:46,519 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:17:51,554 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:17:54,257 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:17:54,352 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:17:54,353 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:17:54,365 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:17:57,514 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:18:02,571 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:18:07,606 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:18:09,351 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:18:09,353 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:18:09,366 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:18:13,545 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:18:18,596 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:18:23,641 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:18:24,265 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:18:24,358 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:18:24,359 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:18:24,373 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:18:29,529 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:18:34,566 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:18:39,367 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:18:39,369 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:18:39,384 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:18:40,509 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:18:45,566 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:18:50,633 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:18:54,282 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:18:54,376 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:18:54,378 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:18:54,390 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:18:56,635 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:19:01,696 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:19:06,735 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:19:09,391 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:19:09,392 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:19:09,400 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:19:12,580 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:19:17,607 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:19:22,655 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:19:24,287 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:19:24,396 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:19:24,397 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:19:24,410 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:19:28,604 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:19:33,645 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:19:38,695 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:19:39,412 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:19:39,414 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:19:39,426 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:19:44,545 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:19:49,609 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:19:54,298 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:19:54,422 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:19:54,423 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:19:54,436 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:19:55,527 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:20:00,586 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:20:05,635 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:20:09,438 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:20:09,439 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:20:09,440 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:20:10,642 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:20:15,677 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:20:20,735 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:20:24,310 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:20:24,447 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:20:24,463 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:20:24,463 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:20:26,592 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:20:31,640 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:20:36,693 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:20:39,466 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:20:39,467 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:20:39,468 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:20:42,690 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:20:47,746 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:20:52,794 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:20:54,326 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:20:54,466 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:20:54,466 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:20:54,467 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:20:58,654 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:21:03,713 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:21:08,746 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:21:09,466 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:21:09,467 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:21:09,471 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:21:14,645 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:21:19,695 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:21:24,334 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:21:24,486 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:21:24,487 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:21:24,487 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:21:25,658 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:21:30,690 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:21:35,751 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:21:39,500 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:21:39,500 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:21:39,500 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:21:41,634 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:21:46,687 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:21:51,726 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:21:54,350 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:21:54,522 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:21:54,522 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:21:54,524 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:21:57,692 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:22:02,742 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:22:07,803 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:22:09,524 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:22:09,526 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:22:09,538 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:22:13,763 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:22:18,825 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:22:23,881 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:22:24,352 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:22:24,536 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:22:24,538 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:22:24,550 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:22:29,713 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:22:34,769 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:22:39,539 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:22:39,540 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:22:39,553 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:22:40,682 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:22:45,737 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:22:50,789 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:22:54,354 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:22:54,556 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:22:54,556 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:22:54,557 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:22:56,754 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:23:01,812 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:23:06,858 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:23:09,566 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:23:09,567 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:23:09,568 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:23:12,691 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:23:17,732 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:23:22,791 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:23:24,361 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:23:24,578 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:23:24,579 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:23:24,580 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:23:28,746 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:23:33,801 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:23:38,847 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:23:39,594 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:23:39,595 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:23:39,601 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:23:44,748 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:23:49,792 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:23:54,372 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:23:54,603 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:23:54,619 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:23:54,620 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:23:55,692 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:24:00,753 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:24:05,809 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:24:09,616 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:24:09,616 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:24:09,616 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:24:11,733 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:24:16,787 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:24:21,841 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:24:24,377 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:24:24,627 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:24:24,628 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:24:24,630 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:24:27,819 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:24:32,877 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:24:37,940 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:24:39,644 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:24:39,645 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:24:39,646 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:24:43,862 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:24:48,933 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:24:53,999 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:24:54,390 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:24:54,654 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:24:54,656 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:24:54,657 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:24:59,877 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:25:04,929 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:25:09,671 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:25:09,671 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:25:09,672 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:25:10,756 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:25:15,809 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:25:20,858 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:25:24,401 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:25:24,681 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:25:24,682 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:25:24,684 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:25:26,848 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:25:31,899 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:25:36,928 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:25:39,693 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:25:39,694 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:25:39,695 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:25:42,810 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:25:47,860 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:25:52,901 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:25:54,413 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:25:54,696 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:25:54,697 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:25:54,698 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:25:58,831 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:26:03,884 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:26:08,938 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:26:09,702 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:26:09,702 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:26:09,703 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:26:14,871 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:26:19,926 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:26:24,418 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:26:24,713 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:26:24,713 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:26:24,714 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:26:25,811 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:26:30,857 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:26:35,924 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:26:39,703 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:26:39,703 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:26:39,718 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:26:41,853 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:26:46,910 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:26:51,949 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:26:54,434 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:26:54,712 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:26:54,713 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:26:54,728 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:26:57,881 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:27:02,929 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:27:07,981 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:27:09,705 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:27:09,706 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:27:09,736 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:27:13,844 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:27:18,898 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:27:23,943 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:27:24,449 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:27:24,710 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:27:24,711 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:27:24,741 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:27:29,927 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:27:34,972 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:27:39,710 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:27:39,712 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:27:39,758 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:27:40,896 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:27:45,932 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:27:50,985 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:27:54,461 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:27:54,710 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:27:54,710 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:27:54,771 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:27:56,813 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:28:01,846 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:28:06,872 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:28:09,714 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-18 17:28:09,715 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: stop_status
+2024-01-18 17:28:09,774 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:28:09,829 DEBUG   SenderThread:35788 [sender.py:send():380] send: exit
+2024-01-18 17:28:09,829 INFO    SenderThread:35788 [sender.py:send_exit():585] handling exit code: 0
+2024-01-18 17:28:09,829 INFO    SenderThread:35788 [sender.py:send_exit():587] handling runtime: 705
+2024-01-18 17:28:09,831 INFO    SenderThread:35788 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-01-18 17:28:09,831 INFO    SenderThread:35788 [sender.py:send_exit():593] send defer
+2024-01-18 17:28:09,832 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:09,832 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 0
+2024-01-18 17:28:09,832 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:09,833 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-01-18 17:28:09,833 INFO    SenderThread:35788 [sender.py:transition_state():613] send defer: 1
+2024-01-18 17:28:09,833 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:09,833 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 1
+2024-01-18 17:28:09,833 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:09,833 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-01-18 17:28:09,833 INFO    SenderThread:35788 [sender.py:transition_state():613] send defer: 2
+2024-01-18 17:28:09,833 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:09,834 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 2
+2024-01-18 17:28:09,834 INFO    HandlerThread:35788 [system_monitor.py:finish():190] Stopping system monitor
+2024-01-18 17:28:09,834 DEBUG   SystemMonitor:35788 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2024-01-18 17:28:09,846 INFO    HandlerThread:35788 [interfaces.py:finish():202] Joined cpu monitor
+2024-01-18 17:28:09,847 DEBUG   SystemMonitor:35788 [system_monitor.py:_start():170] Publishing last batch of metrics
+2024-01-18 17:28:09,847 INFO    HandlerThread:35788 [interfaces.py:finish():202] Joined disk monitor
+2024-01-18 17:28:09,930 INFO    HandlerThread:35788 [interfaces.py:finish():202] Joined gpu monitor
+2024-01-18 17:28:09,931 INFO    HandlerThread:35788 [interfaces.py:finish():202] Joined memory monitor
+2024-01-18 17:28:09,932 INFO    HandlerThread:35788 [interfaces.py:finish():202] Joined network monitor
+2024-01-18 17:28:09,933 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:09,933 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-01-18 17:28:09,933 INFO    SenderThread:35788 [sender.py:transition_state():613] send defer: 3
+2024-01-18 17:28:09,934 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:09,934 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 3
+2024-01-18 17:28:09,936 DEBUG   SenderThread:35788 [sender.py:send():380] send: stats
+2024-01-18 17:28:09,937 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:09,937 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-01-18 17:28:09,937 INFO    SenderThread:35788 [sender.py:transition_state():613] send defer: 4
+2024-01-18 17:28:09,937 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:09,937 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 4
+2024-01-18 17:28:09,939 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:09,939 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-01-18 17:28:09,939 INFO    SenderThread:35788 [sender.py:transition_state():613] send defer: 5
+2024-01-18 17:28:09,940 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:09,940 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 5
+2024-01-18 17:28:09,941 DEBUG   SenderThread:35788 [sender.py:send():380] send: summary
+2024-01-18 17:28:09,943 INFO    SenderThread:35788 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-01-18 17:28:09,944 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:09,944 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-01-18 17:28:09,944 INFO    SenderThread:35788 [sender.py:transition_state():613] send defer: 6
+2024-01-18 17:28:09,945 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:09,945 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 6
+2024-01-18 17:28:09,946 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:09,946 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-01-18 17:28:09,946 INFO    SenderThread:35788 [sender.py:transition_state():613] send defer: 7
+2024-01-18 17:28:09,946 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: status_report
+2024-01-18 17:28:09,947 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:09,947 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 7
+2024-01-18 17:28:09,948 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:09,948 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-01-18 17:28:10,632 INFO    Thread-20 :35788 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\wandb-summary.json
+2024-01-18 17:28:10,632 INFO    Thread-20 :35788 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\output.log
+2024-01-18 17:28:10,833 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: poll_exit
+2024-01-18 17:28:11,820 INFO    SenderThread:35788 [sender.py:transition_state():613] send defer: 8
+2024-01-18 17:28:11,821 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: poll_exit
+2024-01-18 17:28:11,821 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:11,822 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 8
+2024-01-18 17:28:11,822 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:11,823 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-01-18 17:28:11,823 INFO    SenderThread:35788 [job_builder.py:build():281] Attempting to build job artifact
+2024-01-18 17:28:11,824 INFO    SenderThread:35788 [job_builder.py:_get_source_type():404] no source found
+2024-01-18 17:28:11,824 INFO    SenderThread:35788 [sender.py:transition_state():613] send defer: 9
+2024-01-18 17:28:11,825 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:11,825 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 9
+2024-01-18 17:28:11,825 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:11,825 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-01-18 17:28:11,825 INFO    SenderThread:35788 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-01-18 17:28:11,844 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: poll_exit
+2024-01-18 17:28:12,645 INFO    SenderThread:35788 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\output.log
+2024-01-18 17:28:12,646 INFO    SenderThread:35788 [dir_watcher.py:finish():388] scan: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files
+2024-01-18 17:28:12,647 INFO    SenderThread:35788 [dir_watcher.py:finish():402] scan save: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\conda-environment.yaml conda-environment.yaml
+2024-01-18 17:28:12,649 INFO    SenderThread:35788 [dir_watcher.py:finish():402] scan save: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\config.yaml config.yaml
+2024-01-18 17:28:12,650 INFO    SenderThread:35788 [dir_watcher.py:finish():402] scan save: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\output.log output.log
+2024-01-18 17:28:12,666 INFO    SenderThread:35788 [dir_watcher.py:finish():402] scan save: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\requirements.txt requirements.txt
+2024-01-18 17:28:12,679 INFO    SenderThread:35788 [dir_watcher.py:finish():402] scan save: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\wandb-metadata.json wandb-metadata.json
+2024-01-18 17:28:12,680 INFO    SenderThread:35788 [dir_watcher.py:finish():402] scan save: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\wandb-summary.json wandb-summary.json
+2024-01-18 17:28:12,705 INFO    SenderThread:35788 [dir_watcher.py:finish():402] scan save: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\media\table\Configs_0_73c2fdae2a4fdcd49dd6.table.json media/table/Configs_0_73c2fdae2a4fdcd49dd6.table.json
+2024-01-18 17:28:12,706 INFO    SenderThread:35788 [sender.py:transition_state():613] send defer: 10
+2024-01-18 17:28:12,706 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: poll_exit
+2024-01-18 17:28:12,707 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:12,707 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 10
+2024-01-18 17:28:12,708 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:12,708 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-01-18 17:28:12,708 INFO    SenderThread:35788 [file_pusher.py:finish():175] shutting down file pusher
+2024-01-18 17:28:12,733 ERROR   wandb-upload_1:35788 [internal_api.py:execute():369] 404 response executing GraphQL.
+2024-01-18 17:28:12,733 ERROR   wandb-upload_1:35788 [internal_api.py:execute():370] {"errors":[{"message":"run CNNRegression/cqbrb037 not found during createRunFiles","path":["createRunFiles"]}],"data":{"createRunFiles":null}}
+2024-01-18 17:28:12,734 ERROR   Thread-19 (_thread_body):35788 [step_upload.py:_handle_event():200] Failed to upload file: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\config.yaml
+Traceback (most recent call last):
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\upload_job.py", line 57, in run
+    self.push()
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\upload_job.py", line 106, in push
+    _, upload_headers, result = self._api.upload_urls(project, [self.save_name])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\apis\normalize.py", line 73, in wrapper
+    raise err
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\apis\normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 2175, in upload_urls
+    query_result = self.gql(
+                   ^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 338, in gql
+    ret = self._retry_gql(
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\lib\retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\util.py", line 906, in no_retry_auth
+    raise CommError(
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2024-01-18 17:28:12,846 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: poll_exit
+2024-01-18 17:28:12,848 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: poll_exit
+2024-01-18 17:28:13,245 ERROR   wandb-upload_3:35788 [internal_api.py:execute():369] 404 response executing GraphQL.
+2024-01-18 17:28:13,245 ERROR   wandb-upload_3:35788 [internal_api.py:execute():370] {"errors":[{"message":"run CNNRegression/cqbrb037 not found during createRunFiles","path":["createRunFiles"]}],"data":{"createRunFiles":null}}
+2024-01-18 17:28:13,247 ERROR   Thread-19 (_thread_body):35788 [step_upload.py:_handle_event():200] Failed to upload file: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\wandb-summary.json
+Traceback (most recent call last):
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\upload_job.py", line 57, in run
+    self.push()
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\upload_job.py", line 106, in push
+    _, upload_headers, result = self._api.upload_urls(project, [self.save_name])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\apis\normalize.py", line 73, in wrapper
+    raise err
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\apis\normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 2175, in upload_urls
+    query_result = self.gql(
+                   ^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 338, in gql
+    ret = self._retry_gql(
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\lib\retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\util.py", line 906, in no_retry_auth
+    raise CommError(
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2024-01-18 17:28:13,302 ERROR   wandb-upload_0:35788 [internal_api.py:execute():369] 404 response executing GraphQL.
+2024-01-18 17:28:13,302 ERROR   wandb-upload_0:35788 [internal_api.py:execute():370] {"errors":[{"message":"run CNNRegression/cqbrb037 not found during createRunFiles","path":["createRunFiles"]}],"data":{"createRunFiles":null}}
+2024-01-18 17:28:13,303 ERROR   Thread-19 (_thread_body):35788 [step_upload.py:_handle_event():200] Failed to upload file: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\output.log
+Traceback (most recent call last):
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\upload_job.py", line 57, in run
+    self.push()
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\upload_job.py", line 106, in push
+    _, upload_headers, result = self._api.upload_urls(project, [self.save_name])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\apis\normalize.py", line 73, in wrapper
+    raise err
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\apis\normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 2175, in upload_urls
+    query_result = self.gql(
+                   ^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 338, in gql
+    ret = self._retry_gql(
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\lib\retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\util.py", line 906, in no_retry_auth
+    raise CommError(
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2024-01-18 17:28:13,311 ERROR   wandb-upload_2:35788 [internal_api.py:execute():369] 404 response executing GraphQL.
+2024-01-18 17:28:13,311 ERROR   wandb-upload_2:35788 [internal_api.py:execute():370] {"errors":[{"message":"run CNNRegression/cqbrb037 not found during createRunFiles","path":["createRunFiles"]}],"data":{"createRunFiles":null}}
+2024-01-18 17:28:13,312 ERROR   Thread-19 (_thread_body):35788 [step_upload.py:_handle_event():200] Failed to upload file: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\files\requirements.txt
+Traceback (most recent call last):
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\upload_job.py", line 57, in run
+    self.push()
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\filesync\upload_job.py", line 106, in push
+    _, upload_headers, result = self._api.upload_urls(project, [self.save_name])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\apis\normalize.py", line 73, in wrapper
+    raise err
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\apis\normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 2175, in upload_urls
+    query_result = self.gql(
+                   ^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 338, in gql
+    ret = self._retry_gql(
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\sdk\lib\retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\paras\anaconda3\envs\venv\Lib\site-packages\wandb\util.py", line 906, in no_retry_auth
+    raise CommError(
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2024-01-18 17:28:13,519 INFO    Thread-19 (_thread_body):35788 [sender.py:transition_state():613] send defer: 11
+2024-01-18 17:28:13,520 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:13,520 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 11
+2024-01-18 17:28:13,521 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:13,521 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-01-18 17:28:13,521 INFO    SenderThread:35788 [file_pusher.py:join():181] waiting for file pusher
+2024-01-18 17:28:13,521 INFO    SenderThread:35788 [sender.py:transition_state():613] send defer: 12
+2024-01-18 17:28:13,521 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:13,522 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 12
+2024-01-18 17:28:13,522 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:13,522 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-01-18 17:28:13,522 INFO    SenderThread:35788 [file_stream.py:finish():595] file stream finish called
+2024-01-18 17:28:13,599 ERROR   FileStreamThread:35788 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/computecanada/CNNRegression/cqbrb037/file_stream
+NoneType: None
+2024-01-18 17:28:13,675 INFO    SenderThread:35788 [file_stream.py:finish():599] file stream finish is done
+2024-01-18 17:28:13,676 INFO    SenderThread:35788 [sender.py:transition_state():613] send defer: 13
+2024-01-18 17:28:13,676 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:13,676 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 13
+2024-01-18 17:28:13,677 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:13,677 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-01-18 17:28:13,677 INFO    SenderThread:35788 [sender.py:transition_state():613] send defer: 14
+2024-01-18 17:28:13,677 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: defer
+2024-01-18 17:28:13,677 INFO    HandlerThread:35788 [handler.py:handle_request_defer():170] handle defer: 14
+2024-01-18 17:28:13,679 DEBUG   SenderThread:35788 [sender.py:send():380] send: final
+2024-01-18 17:28:13,679 DEBUG   SenderThread:35788 [sender.py:send():380] send: footer
+2024-01-18 17:28:13,680 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: defer
+2024-01-18 17:28:13,680 INFO    SenderThread:35788 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-01-18 17:28:13,681 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: poll_exit
+2024-01-18 17:28:13,682 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: poll_exit
+2024-01-18 17:28:13,682 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: server_info
+2024-01-18 17:28:13,682 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: poll_exit
+2024-01-18 17:28:13,683 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: get_summary
+2024-01-18 17:28:13,683 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: poll_exit
+2024-01-18 17:28:13,684 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: sampled_history
+2024-01-18 17:28:13,685 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: server_info
+2024-01-18 17:28:13,685 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: internal_messages
+2024-01-18 17:28:13,692 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: job_info
+2024-01-18 17:28:13,768 DEBUG   SenderThread:35788 [sender.py:send_request():407] send_request: job_info
+2024-01-18 17:28:13,768 INFO    MainThread:35788 [wandb_run.py:_footer_history_summary_info():3554] rendering history
+2024-01-18 17:28:13,768 INFO    MainThread:35788 [wandb_run.py:_footer_history_summary_info():3586] rendering summary
+2024-01-18 17:28:13,769 INFO    MainThread:35788 [wandb_run.py:_footer_sync_info():3513] logging synced files
+2024-01-18 17:28:13,769 DEBUG   HandlerThread:35788 [handler.py:handle_request():144] handle_request: shutdown
+2024-01-18 17:28:13,769 INFO    HandlerThread:35788 [handler.py:finish():844] shutting down handler
+2024-01-18 17:28:14,702 INFO    WriterThread:35788 [datastore.py:close():294] close: C:\Users\paras\PycharmProjects\DL_regression\main\wandb\run-20240118_171623-cqbrb037\run-cqbrb037.wandb
+2024-01-18 17:28:14,780 INFO    SenderThread:35788 [sender.py:finish():1534] shutting down sender
+2024-01-18 17:28:14,780 INFO    SenderThread:35788 [file_pusher.py:finish():175] shutting down file pusher
+2024-01-18 17:28:14,781 INFO    SenderThread:35788 [file_pusher.py:join():181] waiting for file pusher

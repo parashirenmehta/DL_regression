@@ -1,0 +1,47 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.11.5",
+    "heartbeatAt": "2024-01-18T21:29:48.551752",
+    "startedAt": "2024-01-18T21:29:47.431377",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\paras\\PycharmProjects\\DL_regression\\main\\main_cnn.py",
+    "codePathLocal": "main_cnn.py",
+    "codePath": "main_cnn.py",
+    "host": "Shiv",
+    "username": "paras",
+    "executable": "C:\\Users\\paras\\anaconda3\\envs\\venv\\python.exe",
+    "cpu_count": 14,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 2300.0,
+        "min": 0.0,
+        "max": 2300.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2300.0,
+            "min": 0.0,
+            "max": 2300.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 930.3886680603027,
+            "used": 710.9930572509766
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 15.692127227783203
+    }
+}

@@ -1,0 +1,26 @@
+csv_path = '../data/cover.csv'
+imgs_path = 'C:/Users/paras/eelgrass_new/All_images/Final_images/'
+num_folds = 10
+batch_size = 1
+optimizer = "SGD"
+criterion = "MSELoss"
+learning_rate = 1e-4
+seed = 10
+epochs = 100
+save_model_weights = "C:/Users/paras/eelgrass/model_weights/"
+
+
+#project = "no_patching_no_augmentations"
+#patching = "False"
+#augmentations = "False"
+#image_dir = "/home/parasm/Projects/Data_Images_All/"
+#mask_dir = "/home/parasm/Projects/Data_Masks_All/"
+#test_images_dir = "/home/parasm/Projects/cropped/"
+#test_masks_dir = "/home/parasm/Projects/data_train_converted/"
+#predicted_masks_dir = "/home/parasm/Projects/predicted_masks/"
+#save_valid_splits = "/home/parasm/Projects/validation_splits/"
+#
+#model = "Unet"
+#pretrained = "False"
+#loss_val = "BCEWithLogitsLoss"
+#scheduler = "None"
